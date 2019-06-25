@@ -1,0 +1,159 @@
+html,
+body,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: white; }
+
+header.header {
+  height: 675px;
+  width: 100%;
+  overflow: hidden; }
+  header.header .header-wrap {
+    border-radius: 0 0 630px 0;
+    height: 100%;
+    width: 110%;
+    background: url(../img/m-h-day.jpg); }
+  header.header .landing-logo {
+    padding: 18px 143px;
+    display: flex;
+    color: black; }
+    header.header .landing-logo p {
+      margin-left: 7px;
+      font-size: 1.4em; }
+      header.header .landing-logo p span {
+        display: block;
+        font-size: 0.45em;
+        margin-left: 15px; }
+  header.header .header_heading {
+    font-size: 4.3em;
+    margin: 45px 150px;
+    width: 500px;
+    line-height: 71px;
+    font-weight: bold;
+    color: black; }
+  header.header .header_text {
+    font-size: 1.12em;
+    margin: 51px 140px;
+    width: 615px;
+    line-height: 22px;
+    color: black; }
+  header.header .header_button {
+    margin: 8px 146px;
+    font-size: 15px;
+    padding: 13px 40px;
+    background: #57A000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; }
+
+main.section {
+  width: 100%;
+  background: white;
+  position: relative; }
+  main.section .section_text {
+    margin: 38px auto;
+    font-size: 2.5em;
+    color: black;
+    width: 395px;
+    word-spacing: 5px; }
+  main.section .section_card_wrap {
+    display: flex;
+    justify-content: center;
+    margin: 20px 100px; }
+    main.section .section_card_wrap .section_card {
+      border-radius: 10px;
+      width: 372px;
+      height: 427px;
+      margin: -3px 10px;
+      box-sizing: border-box;
+      padding: 18px;
+      background: #21222F;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center; }
+      main.section .section_card_wrap .section_card .section_card_img {
+        height: 220px; }
+      main.section .section_card_wrap .section_card .section_card_heading {
+        margin-top: 18px;
+        font-size: 23px;
+        color: white;
+        position: relative;
+        z-index: 2; }
+        main.section .section_card_wrap .section_card .section_card_heading .section_card_underline {
+          position: absolute;
+          width: 95%;
+          border: 5px solid #00A3D0;
+          bottom: 2px;
+          z-index: -1; }
+      main.section .section_card_wrap .section_card .section_card_text {
+        margin-top: 15px;
+        line-height: 22px;
+        text-align: center;
+        color: white; }
+  main.section .section_banner {
+    height: 135px;
+    width: 900px;
+    background: linear-gradient(45deg, #57A000, #3346E4);
+    margin: 0 auto;
+    position: absolute;
+    bottom: -270px;
+    left: 270px;
+    display: flex;
+    border-radius: 10px; }
+    main.section .section_banner .section_banner_text_wrap {
+      margin: 23px 94px; }
+      main.section .section_banner .section_banner_text_wrap .section_banner_heading {
+        font-size: 30px;
+        margin-bottom: 16px;
+        word-spacing: 4px;
+        color: black; }
+      main.section .section_banner .section_banner_text_wrap .section_banner_text {
+        color: #D0D3A8; }
+    main.section .section_banner .section_banner_button {
+      margin: 45px 96px;
+      background: #57A000;
+      font-size: 18px;
+      padding: 10px 38px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer; }
+
+.footer {
+  margin: 200px 0 0;
+  padding-top: 125px;
+  width: 100%;
+  height: 100px;
+  background: #21222F;
+  color: white; }
+  .footer .footer-wrap {
+    display: flex;
+    justify-content: center; }
+    .footer .footer-wrap .footer_logo {
+      display: flex;
+      margin-left: 145px;
+      margin-top: 2px; }
+      .footer .footer-wrap .footer_logo p {
+        margin-left: 7px;
+        font-size: 1.4em; }
+        .footer .footer-wrap .footer_logo p span {
+          display: block;
+          font-size: 0.45em;
+          margin-left: 15px; }
+    .footer .footer-wrap .footer_text {
+      width: 290px;
+      margin: -5px auto;
+      font-size: 14.5px; }
+    .footer .footer-wrap .footer-cr {
+      width: 200px;
+      margin-right: 125px;
+      margin-top: 15px;
+      font-size: 14.5px; }

@@ -1,0 +1,21 @@
+$black: black;
+$white: white;
+$grey: #21222F;
+$lightgrey: #3B3E51;
+$orange: #EAAE00;
+$red: #9F194F;
+$header-url-background: url(../img/m-h-night.jpg);
+$main-background: $grey;
+$button-background: $orange;
+$section-card-background: $lightgrey;
+$footer-background: $lightgrey;
+$section-text: $white;
+$header-text-color: $white;
+$banner-text: $white;
+$section-card-heading: $white;
+$starcolorgradient: $orange;
+$endcolorgradient:$red;
+$color-underline: $red;
+@mixin linearGradient($deg, $startcolor, $endcolor) {
+    background: linear-gradient($deg, $startcolor, $endcolor);
+}

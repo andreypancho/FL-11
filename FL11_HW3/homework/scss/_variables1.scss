@@ -1,0 +1,21 @@
+$black: black;
+$white: white;
+$green: #57A000;
+$grey: #21222F;
+$blue: #3346E4;
+$lightblue: #00A3D0;
+$header-url-background: url(../img/m-h-day.jpg);
+$main-background: $white;
+$button-background: $green;
+$section-card-background: $grey;
+$footer-background: $grey;
+$section-text: $black;
+$header-text-color: $black;
+$banner-text: $black;
+$section-card-heading: $white;
+$starcolorgradient: $green;
+$endcolorgradient:$blue;
+$color-underline: $lightblue;
+@mixin linearGradient($deg, $startcolor, $endcolor) {
+    background: linear-gradient($deg, $startcolor, $endcolor);
+}

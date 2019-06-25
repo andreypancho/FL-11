@@ -1,0 +1,189 @@
+html,
+body,
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $main-background;
+}
+
+header.header {
+    height: 675px;
+    width: 100%;
+    overflow: hidden;
+    .header-wrap {
+        border-radius: 0 0 630px 0;
+        height: 100%;
+        width: 110%;
+        background: $header-url-background;
+    }
+    .landing-logo {
+        padding: 18px 143px;
+        display: flex;
+        color: $header-text-color;
+        p {
+            margin-left: 7px;
+            font-size: 1.4em;
+            span {
+                display: block;
+                font-size: 0.45em;
+                margin-left: 15px;
+            }
+        }
+    }
+    .header_heading {
+        font-size: 4.3em;
+        margin: 45px 150px;
+        width: 500px;
+        line-height: 71px;
+        font-weight: bold;
+        color: $header-text-color;
+    }
+    .header_text {
+        font-size: 1.12em;
+        margin: 51px 140px;
+        width: 615px;
+        line-height: 22px;
+        color: $header-text-color;
+    }
+    .header_button {
+        margin: 8px 146px;
+        font-size: 15px;
+        padding: 13px 40px;
+        background: $button-background;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+main.section {
+    width: 100%;
+    background: $main-background;
+    position: relative;
+    .section_text {
+        margin: 38px auto;
+        font-size: 2.5em;
+        color: $section-text;
+        width: 395px;
+        word-spacing: 5px;
+    }
+    .section_card_wrap {
+        display: flex;
+        justify-content: center;
+        margin: 20px 100px;
+        .section_card {
+            border-radius: 10px;
+            width: 372px;
+            height: 427px;
+            margin: -3px 10px;
+            box-sizing: border-box;
+            padding: 18px;
+            background: $section-card-background;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            .section_card_img {
+                height: 220px;
+            }
+            .section_card_heading {
+                margin-top: 18px;
+                font-size: 23px;
+                color: $section-card-heading;
+                position: relative;
+                z-index: 2;
+                .section_card_underline {
+                    position: absolute;
+                    width: (100%-5);
+                    border: 5px solid $color-underline;
+                    bottom: 2px;
+                    z-index: -1;
+                }
+            }
+            .section_card_text {
+                margin-top: 15px;
+                line-height: 22px;
+                text-align: center;
+                color: white;
+            }
+        }
+    }
+    .section_banner {
+        height: 135px;
+        width: 900px;
+        @include linearGradient(45deg, $starcolorgradient, $endcolorgradient);
+        margin: 0 auto;
+        position: absolute;
+        bottom: -270px;
+        left: 270px;
+        display: flex;
+        border-radius: 10px;
+        .section_banner_text_wrap {
+            margin: 23px 94px;
+            .section_banner_heading {
+                font-size: 30px;
+                margin-bottom: 16px;
+                word-spacing: 4px;
+                color: $banner-text;
+            }
+            .section_banner_text {
+                color: #D0D3A8;
+            }
+        }
+        .section_banner_button {
+            margin: 45px 96px;
+            background: $button-background;
+            font-size: 18px;
+            padding: 10px 38px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer {
+    margin: 200px 0 0;
+    padding-top: 125px;
+    width: 100%;
+    height: 100px;
+    background: $footer-background;
+    color: white;
+    .footer-wrap {
+        display: flex;
+        justify-content: center;
+        .footer_logo {
+            display: flex;
+            margin-left: 145px;
+            margin-top: 2px;
+            p {
+                margin-left: 7px;
+                font-size: 1.4em;
+                span {
+                    display: block;
+                    font-size: 0.45em;
+                    margin-left: 15px;
+                }
+            }
+        }
+        .footer_text {
+            width: 290px;
+            margin: -5px auto;
+            font-size: 14.5px;
+        }
+        .footer-cr {
+            width: 200px;
+            margin-right: 125px;
+            margin-top: 15px;
+            font-size: 14.5px;
+        }
+    }
+}
