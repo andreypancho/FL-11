@@ -1,3 +1,8 @@
+const maxRandomNumberStep = 4;
+const maxPrizeForTheTryStep = 100;
+const prizeDecreasesWhenTheError = 2;
+const maxAttempts = 3;
+
 let startGame = confirm('Do you want to play a game?');
 let totalPrize = 0;
 
@@ -7,15 +12,14 @@ if (startGame) {
     let prizeForTheTry = 0;
 
     while (startGame) {
-        maxRandomNumber += 4;
-        maxPrizeForTheTry += 100;
+        maxRandomNumber += maxRandomNumberStep;
+        maxPrizeForTheTry += maxPrizeForTheTryStep;
 
         let numberWin = Math.floor(Math.random() * maxRandomNumber);
         console.log(numberWin);
 
-        for (let i = 3; i > 0; i--) {
-            // debugger;
-            if (i === 3) {
+        for (let i = maxAttempts; i > 0; i--) {
+            if (i === maxAttempts) {
                 prizeForTheTry = maxPrizeForTheTry;
             }
 
@@ -49,7 +53,7 @@ if (startGame) {
                         `Thank you for your participation. Your prize is: ${totalPrize} $`
                     );
                 }
-                prizeForTheTry /= 2;
+                prizeForTheTry /= prizeDecreasesWhenTheError;
             }
         }
     }
