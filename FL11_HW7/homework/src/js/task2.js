@@ -1,3 +1,4 @@
+const startConstRandomNumber = 5;
 const maxRandomNumberStep = 4;
 const maxPrizeForTheTryStep = 100;
 const prizeDecreasesWhenTheError = 2;
@@ -7,7 +8,7 @@ let startGame = confirm('Do you want to play a game?');
 let totalPrize = 0;
 
 if (startGame) {
-    let maxRandomNumber = 5;
+    let maxRandomNumber = startConstRandomNumber;
     let maxPrizeForTheTry = 0;
     let prizeForTheTry = 0;
 
@@ -16,7 +17,6 @@ if (startGame) {
         maxPrizeForTheTry += maxPrizeForTheTryStep;
 
         let numberWin = Math.floor(Math.random() * maxRandomNumber);
-        console.log(numberWin);
 
         for (let i = maxAttempts; i > 0; i--) {
             if (i === maxAttempts) {
@@ -24,7 +24,7 @@ if (startGame) {
             }
 
             let mainQuestion = `Choose a roulette pocket number from 0 to ${maxRandomNumber -
-        1}\n`;
+                1}\n`;
             mainQuestion += `Attempts left: ${i}\n`;
             mainQuestion += `Total prize: ${totalPrize}\n`;
             mainQuestion += `Possible prize on current attempt: ${prizeForTheTry}`;
@@ -37,21 +37,45 @@ if (startGame) {
                 if (nextGame) {
                     startGame = nextGame;
                     totalPrize += prizeForTheTry;
-                    console.log(nextGame);
                     break;
                 } else {
+                    totalPrize += prizeForTheTry;
                     alert(
                         `Thank you for your participation. Your prize is: ${totalPrize} $`
                     );
-                    startGame = false;
+                    let nextGame = confirm(
+                        `Play again?`
+                    );
+
+                    if (nextGame) {
+                        startGame = nextGame;
+                        maxRandomNumber = startConstRandomNumber;
+                        maxPrizeForTheTry = 0;
+                        prizeForTheTry = 0;
+                    } else {
+                        startGame = false;
+                    }
                     break;
                 }
             } else {
                 if (i === 1) {
-                    startGame = false;
                     alert(
                         `Thank you for your participation. Your prize is: ${totalPrize} $`
                     );
+                    let nextGame = confirm(
+                        `Play again?`
+                    );
+
+                    if (nextGame) {
+                        startGame = nextGame;
+                        maxRandomNumber = startConstRandomNumber;
+                        maxPrizeForTheTry = 0;
+                        prizeForTheTry = 0;
+                        totalPrize = 0;
+                    } else {
+                        startGame = false;
+                    }
+
                 }
                 prizeForTheTry /= prizeDecreasesWhenTheError;
             }
