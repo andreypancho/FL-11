@@ -14,8 +14,8 @@ if (email === null || email.trim().length === 0) {
     if (password === null || password.trim().length === 0) {
         console.log('Canceled.');
     } else if (
-        (email === 'user@gmail.com' && password === 'UserPass') ||
-        (email === 'admin@gmail.com' && password === 'AdminPass')
+        email === 'user@gmail.com' && password === 'UserPass' ||
+        email === 'admin@gmail.com' && password === 'AdminPass'
     ) {
         let willChanged = confirm('Do you want to change your password?');
         if (willChanged) {
