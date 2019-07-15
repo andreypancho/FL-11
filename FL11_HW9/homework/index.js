@@ -39,6 +39,7 @@ function mapArray(arr, fn) {
     executeforEach(result, function(el) {
         console.log(el)
     });
+    return result;
 }
 
 function filterArray(arr, fn) {
@@ -51,20 +52,13 @@ function filterArray(arr, fn) {
     executeforEach(result, function(el) {
         console.log(el)
     });
+    return result;
 }
 
 function showFormattedDate(date) {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
     date = 'Date: ' + months[date.getMonth()] + ' ' + date.getDate() + ' ' + date.getFullYear();
     return date;
-}
-
-function daysBetween(date1, date2) {
-    const msInDays = 86400000;
-    date1 = date1.getTime();
-    date2 = date2.getTime();
-    let result = Math.round((date2 - date1) / msInDays);
-    return result;
 }
 
 function canConvertToDate(date) {
@@ -76,22 +70,27 @@ function canConvertToDate(date) {
     }
 }
 
-function getAmountOfAdultPeople(data) {
+function daysBetween(date1, date2) {
     const msInDays = 86400000;
+    date1 = date1.getTime();
+    date2 = date2.getTime();
+    let result = Math.round((date2 - date1) / msInDays);
+    return result;
+}
+
+function getAmountOfAdultPeople(data) {
     const minAge = 18;
-    const minValueYearInJS = 1970;
+    const daysInYear = 365;
     let count = 0;
-
-    data.forEach(item => {
-        let difference = daysBetween(new Date(item[' birthday ']), new Date());
-        difference = new Date(difference * msInDays);
-        difference = difference.getFullYear() - minValueYearInJS;
-        if (difference > minAge) {
-            count++
-        }
+    let result = [];
+    for (let i = 0; i < data.length; i++) {
+        let difference = daysBetween(new Date(data[i][' birthday ']), new Date());
+        result[i] = difference / daysInYear;
+    }
+    count = filterArray(result, function(el) {
+        return el > minAge
     });
-
-    return count;
+    return count.length;
 }
 
 function keys(obj) {
