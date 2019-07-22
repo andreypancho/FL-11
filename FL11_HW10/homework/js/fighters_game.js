@@ -41,6 +41,11 @@ class Fighter {
             }
         }
         this.heal = (heal) => {
+            let maxHP = 100;
+            if (hp + heal > maxHP) {
+                hp = maxHP;
+                return hp;
+            }
             hp += heal
             return hp;
         }
