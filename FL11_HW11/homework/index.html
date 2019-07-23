@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 11 - TODO Cat List</title>
+    <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+
+    <h1>TODO Cat List</h1>
+    <div class="create-task">
+        <input type="text" id="create-task">
+        <i class="material-icons" onclick="createTask(this)">
+          add_box
+        </i>
+    </div>
+    <hr />
+
+
+    <div id="root"></div>
+
+
+    <div class="tasks-container">
+    </div>
+
+    <script src="./src/app.js"></script>
+</body>
+
+</html>
